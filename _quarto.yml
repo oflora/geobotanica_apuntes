@@ -1,0 +1,68 @@
+project:
+  type: book
+
+book:
+  title: "PLANTILLA APUNTES"
+  author: 
+    name: "Javier Esteve Bueno"
+    email: esteve7an@gmail.com
+  date: today
+  chapters:
+    - index.qmd
+    - 1_tema.qmd
+    - 2_tema.qmd
+    - references.qmd
+  appendices:
+    - 3_tema.qmd
+    - references.qmd   
+  downloads: [pdf, epub]
+  repo-url: https://github.com/oflora/geobotanica_apuntes/
+  repo-actions: [edit, issue]
+  navbar:
+    right:
+      - icon: telegram
+        href: https://mastodon.com
+      - icon: mastodon
+        href: https://mastodon.com
+  page-footer: "Copyright 2021, Norah Jones"
+
+lang: es
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      light: minty
+      dark: darkly
+
+
+  pdf:
+    documentclass: scrreprt
+    #fontfamily: biolinum
+    fontsize: 12pt
+    include-in-header: preamble.tex
+    cap-location: bottom
+    papersize: A4
+    geometry:
+      - top=25mm
+      - left=25mm
+      - right=25mm
+      - bottom=30mm
+    fig-align: center
+    fig-width: 5
+    figh-height: 3
+    fig-format: png
+    link-citations: true
+  epub: default
+  #docx: default
+
+execute: 
+  echo: false
+  output: true
+  warning: false
+  error: false
+  cache: false
+
+editor: visual
+
+

@@ -1,0 +1,3 @@
+# Prefacio {.unnumbered}
+
+Esto es una plantilla de ejemplo para la elaboración de apuntes.
