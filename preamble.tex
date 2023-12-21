@@ -1,0 +1,57 @@
+\usepackage{microtype}
+
+\usepackage[scaled=1.1]{libertine}% package has a handy scaling option
+\renewcommand{\familydefault}{\sfdefault}
+
+% Define colors
+\usepackage{xcolor}
+\definecolor{p1}{HTML}{378f4B}
+\definecolor{p2}{HTML}{aa7843}
+\definecolor{p3}{HTML}{718691}
+\definecolor{p4}{HTML}{8fa1af}
+\definecolor{p5}{HTML}{94bf94}
+
+%\usepackage{sectsty}
+%\chapterfont{\color{p1}}  % sets colour of chapters
+%\sectionfont{\color{p2}}  % sets colour of sections
+%\subsectionfont{\color{p3}}
+%\subsubsectionfont{\color{p4}}
+
+\addtokomafont{chapter}{\color{p1}}
+\addtokomafont{section}{\color{p2}}
+\addtokomafont{subsection}{\color{p3}}
+\addtokomafont{subsubsection}{\color{p4}}
+
+% Add color to links
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks  ,
+  citecolor=p2,
+  linkcolor=p3,
+  urlcolor=p3}
+
+% Change "Capitulo" to "Tema"
+\makeatletter
+\renewcommand{\@chapapp}{Tema}
+\makeatother
+
+
+% Line under header
+\usepackage{fancyhdr}% http://ctan.org/pkg/fancyhdr
+\pagestyle{fancy}% Change page style to fancy
+\fancyhf{}% Clear header/footer
+%\fancyfoot[C]{\thepage}
+
+\renewcommand{\headrulewidth}{1pt}
+%\renewcommand{\headrule}{\hbox to\headwidth{%
+%  \color{p5}\leaders\hrule height \headrulewidth\hfill}}
+
+\usepackage{xpatch}
+\xpretocmd\headrule{\color{p5}}{}{\PatchFailed}
+
+%\renewcommand{\footrulewidth}{2pt}
+%\renewcommand{\footruleskip}{5mm}
+
+\lhead{\textcolor{p5}{GEOBOTÁNICA}}
+\rhead{\textcolor{p5}{\leftmark}}
+\cfoot{{\thepage}}

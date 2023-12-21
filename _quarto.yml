@@ -1,5 +1,6 @@
 project:
   type: book
+output-dir: docs
 
 book:
   title: "PLANTILLA APUNTES"
@@ -20,11 +21,9 @@ book:
   repo-actions: [edit, issue]
   navbar:
     right:
-      - icon: telegram
-        href: https://mastodon.com
-      - icon: mastodon
-        href: https://mastodon.com
-  page-footer: "Copyright 2021, Norah Jones"
+      - icon: flower2
+        href: https://oflora.github.io
+  page-footer: "Pie de página"
 
 lang: es
 bibliography: references.bib
