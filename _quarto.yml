@@ -1,6 +1,6 @@
 project:
   type: book
-output-dir: docs
+  output-dir: doccss
 
 book:
   title: "PLANTILLA APUNTES"
@@ -23,6 +23,7 @@ book:
     right:
       - icon: flower2
         href: https://oflora.github.io
+        text: Página principal
   page-footer: "Pie de página"
 
 lang: es
@@ -31,8 +32,12 @@ bibliography: references.bib
 format:
   html:
     theme:
-      light: minty
-      dark: darkly
+      light: 
+        - minty
+        - custom.scss
+      dark: 
+        - darkly
+        - custom.scss
 
 
   pdf:
